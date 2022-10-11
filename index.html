@@ -1,0 +1,26 @@
+<script>
+    var i=0;
+    var picture=[];
+    var seconds=3000;
+
+    picture[0]='p2.jpg';
+    picture[1]='p3.jpg';
+    picture[2]='p4.jpg';
+    
+
+    function changePicture(){
+        document.slide.src = picture[i];
+
+        if(i<picture.length -1){
+            i++;
+        }
+        else{
+            i=0;
+        }
+        setTimeout("changePicture()",seconds);
+    }
+    window.onload=changePicture;
+
+
+</script>
+<img name="slide" width="400" height="400">
